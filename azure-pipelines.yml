@@ -36,3 +36,8 @@ steps:
 
 - script: |
     echo $(Gtokn)
+
+task: PublishPipelineArtifact@1
+inputs:
+  targetPath: '$(Build.ArtifactStagingDirectory)'
+   artifactName: 'MyArtifact'
