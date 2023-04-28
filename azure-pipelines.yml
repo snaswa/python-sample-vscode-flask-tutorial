@@ -39,5 +39,5 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(System.DefaultWorkingDirectory)/bin/OmArtifact'
+    targetPath: '$(System.DefaultWorkingDirectory)/bin'
     artifactName: 'OmArtifact'
