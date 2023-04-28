@@ -15,6 +15,9 @@ strategy:
     Python37:
       python.version: '3.7'
 
+variables:
+- group: testgithubtok
+
 steps:
 - task: UsePythonVersion@0
   inputs:
@@ -30,3 +33,6 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- script: |
+    echo $(Gtokn)
