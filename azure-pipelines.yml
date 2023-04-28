@@ -42,21 +42,21 @@ steps:
     pathToPublish: '$(System.DefaultWorkingDirectory)/bin'
     artifactName: 'OmArtifact'
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      # Configure git
-      git config --global user.email "sudhirnaswa@gmail.com"
-      git config --global user.name "snaswa"
+#- task: CmdLine@2
+ # inputs:
+  #  script: |
+   #   # Configure git
+    #  git config --global user.email "sudhirnaswa@gmail.com"
+     # git config --global user.name "snaswa"
       
       # Add the artifact to the repository
-      git add .
+      #git add .
       
       # Commit the changes
-      git commit -m "Add artifact"
+      #git commit -m "Add artifact"
       
       # Push the changes to the repository
-      git push origin HEAD:main
-  env:
+     # git push origin HEAD:main
+  #env:
     # Set the GitHub personal access token as an environment variable
-    GITHUB_TOKEN: $(GITHUB_TOKEN)
+    #GITHUB_TOKEN: $(GITHUB_TOKEN)
